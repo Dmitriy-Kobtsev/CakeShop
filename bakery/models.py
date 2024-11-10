@@ -3,7 +3,7 @@ from django.db import models
 
 class Category(models.Model):
 
-    name = models.CharField(verbose_name='Название', null=True, blank=True)
+    name = models.CharField(verbose_name='Название', max_length=50, null=True, blank=True)
     about = models.TextField(verbose_name='Описание', null=True, blank=True)
 
     def __str__(self):
