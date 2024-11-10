@@ -1,0 +1,6 @@
+<div class="container p-2" id="menu_category">
+    {% for item in category %}
+    <a category={{ item.name }} href="{% url 'bakery:product_filter' item.pk %}" class="btn btn-lg"
+       aria-pressed="true">{{ item.name }}</a>
+    {% endfor %}
+</div>

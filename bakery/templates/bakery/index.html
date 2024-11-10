@@ -1,0 +1,341 @@
+{% extends 'bakery/base.html' %}
+{% load mediapath_tag %}
+{% load static %}
+
+{% block content %}
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section ">
+
+            <img src="{% static 'assets/img/mainbanner1.png' %}" alt="" data-aos="fade-in">
+
+            <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Добро пожаловать</h2>
+                        <p>Новый мастер класс "Новое меню"</p>
+                        <a href="#about" class="btn-get-started">Перейти</a>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Название мастер класса</h2>
+                <p>Небольшое описание мастеркласса</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-1 content">
+                        <h3>Voluptatem dignissimos provident</h3>
+                        <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                            </li>
+                            <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span>
+                            </li>
+                            <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span>
+                            </li>
+                        </ul>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+
+        <!-- Clients Section -->
+        <section id="clients" class="clients section light-background">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                            "loop": true,
+                            "speed": 600,
+                            "autoplay": {
+                                "delay": 5000
+                            },
+                            "slidesPerView": "auto",
+                            "pagination": {
+                                "el": ".swiper-pagination",
+                                "type": "bullets",
+                                "clickable": true
+                            },
+                            "breakpoints": {
+                                "320": {
+                                    "slidesPerView": 2,
+                                    "spaceBetween": 40
+                                },
+                                "480": {
+                                    "slidesPerView": 3,
+                                    "spaceBetween": 60
+                                },
+                                "640": {
+                                    "slidesPerView": 4,
+                                    "spaceBetween": 80
+                                },
+                                "992": {
+                                    "slidesPerView": 6,
+                                    "spaceBetween": 120
+                                }
+                            }
+                        }
+                    </script>
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}"
+                                                       class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section><!-- /Clients Section -->
+
+        <!-- Cards Section -->
+        <section id="services" class="cards section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Кейтеринг</h2>
+                <p>отрасль общественного питания, связанная с оказанием услуг на удалённых точках.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-item">
+                            <span>01</span>
+                            <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
+                            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero
+                                placeat</p>
+                        </div>
+                    </div><!-- Card Item -->
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-item">
+                            <span>02</span>
+                            <h4><a href="" class="stretched-link">Repellat Nihil</a></h4>
+                            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire
+                                leno para dest</p>
+                        </div>
+                    </div><!-- Card Item -->
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-item">
+                            <span>03</span>
+                            <h4><a href="" class="stretched-link">Ad ad velit qui</a></h4>
+                            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam
+                                quis</p>
+                        </div>
+                    </div><!-- Card Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Cards Section -->
+
+        <!-- Product Section -->
+        <section id="portfolio" class="portfolio section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Продукция</h2>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">Все</li>
+                        <li data-filter=".filter-cake">Торты</li>
+                        <li data-filter=".filter-mini_cake">Пироженные</li>
+                        <li data-filter=".filter-frost">Заморозка</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                        {% for object in object_list %}
+                            {% if object.is_published %}
+                                {% if object.category_filter == "cake" %}
+                                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cake">
+                                        <div class="portfolio-content h-100">
+                                            <img src="{% mediapath object.img %}" class="img-fluid rounded-4" alt="">
+                                            <div class="portfolio-info">
+                                                <h4>{{ object.name }}</h4>
+                                                <p>{{ object.description }}</p>
+                                                <a href="{% mediapath object.img %}" title="{{ object.name }}"
+                                                   data-gallery="portfolio-gallery-app"
+                                                   class="glightbox preview-link rounded"><i
+                                                        class="bi bi-zoom-in"></i></a>
+                                                <a href="{% url 'bakery:product_info' object.pk %}" title="More Details"
+                                                   class="details-link"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                        <h4>{{ object.name }}</h4>
+                                        <p class="price">
+                                          {{ object.price }}₽ <small>{{ object.weight }}г</small>
+                                        </p>
+                                    </div><!-- End Portfolio Item -->
+                                {% elif object.category_filter == "mini_cake" %}
+                                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mini_cake">
+                                        <div class="portfolio-content h-100">
+                                            <img src="{% mediapath object.img %}" class="img-fluid rounded-4" alt="">
+                                            <div class="portfolio-info">
+                                                <h4>{{ object.name }}</h4>
+                                                <p>{{ object.description }}</p>
+                                                <a href="{% mediapath object.img %}" title="{{ object.name }}"
+                                                   data-gallery="portfolio-gallery-product" class="glightbox preview-link rounded"><i
+                                                        class="bi bi-zoom-in"></i></a>
+                                                <a href="{% url 'bakery:product_info' object.pk %}" title="More Details"
+                                                   class="details-link"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                        <h4>{{ object.name }}</h4>
+                                        <p class="price">
+                                          {{ object.price }}₽ <small>{{ object.weight }}г</small>
+                                        </p>
+                                    </div><!-- End Portfolio Item -->
+                                {% elif object.category_filter == "frost" %}
+                                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-frost">
+                                        <div class="portfolio-content h-100">
+                                            <img src="{% mediapath object.img %}" class="img-fluid" alt="">
+                                            <div class="portfolio-info">
+                                                <h4>{{ object.name }}</h4>
+                                                <p>{{ object.description }}</p>
+                                                <a href="#" title="{{ object.name }}"
+                                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                                        class="bi bi-zoom-in"></i></a>
+                                                <a href="#" title="More Details" class="details-link"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="btn btn-outline-primary m-2">
+                                            <a href="#" class="btn">Заказать</a>
+                                        </div>
+                                    </div><!-- End Portfolio Item -->
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Section -->
+
+        <!-- Team Section -->
+        <section id="team" class="team section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>обо мне</h2>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-member d-flex align-items-start">
+                            <div class="pic"><img src="{% static 'assets/img/team/team-2.jpg '%}" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Сабина</h4>
+                                <span>Повар-кондитер</span>
+                                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Team Member -->
+                        <section class="contact section">
+                            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                            <div class="row gy-4">
+
+                                <div class="col-lg-4">
+                                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                                        <div>
+                                            <h3>Address</h3>
+                                            <p>A108 Adam Street, New York, NY 535022</p>
+                                        </div>
+                                    </div><!-- End Info Item -->
+
+                                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                                        <i class="bi bi-telephone flex-shrink-0"></i>
+                                        <div>
+                                            <h3>Call Us</h3>
+                                            <p>+1 5589 55488 55</p>
+                                        </div>
+                                    </div><!-- End Info Item -->
+
+                                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                                        <i class="bi bi-envelope flex-shrink-0"></i>
+                                        <div>
+                                            <h3>Email Us</h3>
+                                            <p>info@example.com</p>
+                                        </div>
+                                    </div><!-- End Info Item -->
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                </div>
+            </div>
+        </section><!-- /Team Section -->
+
+
+
+    </main>
+
+{% endblock %}

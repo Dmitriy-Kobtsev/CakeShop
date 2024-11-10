@@ -1,0 +1,21 @@
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+    <a href="{% url 'bakery:index'%}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!--<img src="assets/img/logo.png" alt="">-->
+        <h1 class="sitename">Bakery</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="{% url 'bakery:index'%}" class="active">Home</a></li>
+            <li><a href="{% url 'bakery:index'%}#about">Мастерклассы</a></li>
+            <li><a href="{% url 'bakery:index'%}#services">Повар на дом</a></li>
+            <li><a href="{% url 'bakery:index'%}#portfolio">Продукция</a></li>
+            <li><a href="{% url 'bakery:index'%}#team">Контакты</a></li>
+            <li><a href="{% url 'bakery:index'%}#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+</div>

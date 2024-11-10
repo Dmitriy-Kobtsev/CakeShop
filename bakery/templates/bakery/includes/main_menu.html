@@ -1,0 +1,72 @@
+{% load mediapath_tag %}
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+    <a href="{% url 'bakery:index'%}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+<!--        <img src="assets/img/logo.png" alt="">-->
+        <h1 class="sitename">Bakery</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">Мастерклассы</a></li>
+            <li><a href="#services">Повар на дом</a></li>
+            <li><a href="#portfolio">Продукция</a></li>
+            <li><a href="#team">Контакты</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <div class="dropdown">
+                    <a class="bi bi-cart dropdown-toggle w-auto h-auto" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false"></a>
+                    <ul class="dropdown-menu p-3">
+                        {% for item in cart %}
+                        {% with product=item.product %}
+                            <li class="list-group-item d-flex justify-content-between lh-sm border-bottom mb-2">
+                                <div class="container p-0">
+                                    <div class="position-relative">
+                                        <div class="position-absolute top-0 end-0">
+                                            <a type="button" class="btn-close" aria-label="Close"
+                                               href="{% url 'cart:cart_remove' product.pk %}"> </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="{% mediapath product.img %}" class="rounded float-start img-fluid" alt="...">
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="text-body-secondary">{{ product.name }}</p><br>
+                                            <small class="text-body-secondary">{{ product.weight }} г</small><br>
+                                            <small class="text-body-secondary">кол-во: {{ item.quantity }}</small>
+                                        </div>
+                                        <div class="col-auto pr-0 align-self-end">
+                                                <span class="text-body-secondary">
+                                                   ₽{{ item.total_price }}
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endwith %}
+                    {% endfor %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Итого</span>
+                        <strong>₽{{ cart.get_total_price }}</strong>
+                    </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <a  class="btn btn-outline-dark m-1" href="{% url 'cart:cart_detail' %}">
+                            Оформить заказа
+                            </a>
+                            <a  class="btn btn-outline-dark m-1" href="{% url 'cart:cart_detail' %}">
+                            Перейти в корзину
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+
+</div>
