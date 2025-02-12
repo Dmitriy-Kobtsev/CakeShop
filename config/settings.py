@@ -77,9 +77,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bakery',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': '123',
+        'PASSWORD': 'iMyAQSrejFvpFApesejAlOzYvdETkiLl',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '45653',
     }
 }
 
