@@ -54,11 +54,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://cakeshop-production-4cb3.up.railway.app/',
+    'https://cakeshop-production-4cb3.up.railway.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://cakeshop-production-4cb3.up.railway.app/'
+    'https://cakeshop-production-4cb3.up.railway.app'
 ]
 
 ROOT_URLCONF = 'config.urls'
